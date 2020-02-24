@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[hybrid]{markdown}
+\setkeys{Gin}{width=\linewidth}
+\markdownSetup{renderers={
+  image = {\begin{figure}[hbt!]
+    \centering
+    \includegraphics{#3}%
+    \ifx\empty#4\empty\else
+    \caption{#4}%
+    \fi
+    \label{fig:#1}%
+    \end{figure}}
+}}
+
+\title{Project Charter}
+\author{Samuel Lim, Zach Zoltek, Alivia Dutcher, Yazdan Riazi}
+\date{February 2020}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{markdown}
+
+# Initial Information
+
+## Project Title
+
+UMKC Scheduler
+
+## Dates
+
+- Starting: 2/17/20 (17 February 2020)
+- Ending: 5/14/20 (14 May 2020)
+
+## Project Manager
+
+Samuel Lim
+
+## Project Sponsor
+
+School of Computing and Engineering, University of Missouri - Kansas City
+
+## Customer
+
+Gina Campbell
+
+## Users
+
+1. Primary: UMKC Administrative Offices
+2. Secondary: UMKC faculty and associates
+
+# Purpose
+- The current system of scheduling has little foundation for communicating or saving schedules until all information is formalized for the semester simultaneously. This implementation unfortunately leads to an unnecessary wastage of resources and effort invested on the part of advisors.  
+- For certain faculty, this results in a feedback process too far into the semester to make significant adjustments. The needs of persons involved should be adequately accommodated directly at the time of conceptualization.
+- The purpose of this project is to provide an alternative outlet to coordinating and generating course schedules for advising. This allows transparent and timely management of schedule conflicts and change of priorities.
+
+# Goals and Objective
+
+- The primary result of the project is to present a usable log to advisors, namely Gina Campbell, in efforts to interact with informal scheduling information in a structured manner.
+- The project should be easy to access and provide additional information should a session increase in scale without being cumbersome to user to navigate.
+- Using the tentative technologies (listed below), documentation will be a combination of automation and manual explanation, allowing for a natural dynamic from user-facing to computationally engaged components.
+- Additionally, conflicts in generated schedules should be clear and straightforward to diagnose and avoid if possible. The primary result should emphasize these features in any relevant presented interaction.
+
+Reach goals:
+
+- Separate user access from scheduling access
+    + Admin access may be special
+
+# Schedule Information
+
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+**Date (Month/Day 2020)** & **Task Description**\\\\
+\hline
+02/21 & Project Charter Approved\\\\
+02/28 & Product Feature Set Baselined\\\\
+02/29 & Preliminary Requirements Complete\\\\
+\hline
+**03/02** & Iteration \\#1 Complete\\\\
+03/06 & Preliminary Project Plan Complete\\\\
+03/14 & Candidate Architecture Complete\\\\
+03/16 & Technical Risks Resolved* \\\\
+**03/16** & Iteration \\#2 Complete\\\\
+03/31 & Architecture Complete\\\\
+\hline
+**04/07** & Iteration \\#3 Complete\\\\
+**04/20** & Iteration \\#4 Complete\\\\
+04/27 & User Guide and System Administration Manual Complete\\\\
+\hline
+**05/04** & Iteration \\#5 Complete\\\\
+05/04 & System Test Complete\\\\
+05/04 & Product Released\\\\
+\hline
+\end{tabular}
+\end{center}
+*(Deliverable: technical prototype that demonstrates programming elements needed to implement desired functionality)
+
+\newpage
+# Financial Information
+\begin{center}
+\begin{tabular}{|c|l|l|l|l|l|l|}
+\hline 
+**Role** & \\# Involved & hours/week & \\# of weeks & Hours & **Rate (per hour)** & **Total**  \\\\
+\hline \\
+Project Manager       & 1           & 6                          & 14          & 84          & \$100.00                                      & \$8400       \\\\ \hline
+Requirements Engineer & 1           & 6                          & 14          & 84          & \$85.00                                       & \$7140       \\\\ \hline
+Software Engineer     & 2           & 6                          & 14          & 168         & \$65.00                                       & \$10920       \\\\ \hline
+**Total**             & 4           & 24                         & 14          & 336         & \$78.75 (avg.)                                & \$26460       \\\\ \hline
+\end{tabular}
+\end{center}
+
+# Project Priorities and Degrees of Freedom
+
+- The overarching schedule has been previously established to complete the project by the end of spring. There is some elasticity in the implementation of the schedule given these constraints. Early iterations have a higher flexibility in the technology stack used. 
+- Changes in design will need to adjust to scale accordingly. If complications may arise, roles may be reassigned by need moving forward through the iterations in order to fulfill the high-priority features.
+
+
+# Approach
+
+- An iterative and incremental approach is planned. The highest priority features will be implemented first such that after the first iteration there will always be a usable product. Speculative architecture and design will be kept to a minimum. No iteration will favor technical “infrastructure” over usable functionality.
+- The developers have little experience with the technologies being used. This creates significant technical risks (outlined below). In order to resolve these risks in a timely manner, a "technical prototype" will be created early in the project (see schedule information above).
+- However, due to the general specification, the technologies in use may not require a large project specification but will still need rigorous review and feedback when dissecting user-facing requirements.
+
+
+# Constraints
+
+- There should not be any download requirements to UMKC computers or information systems.  The final product is to be a stand-alone website and furthermore, as a reach goal, a full web app. The implementation should be fully accessible through a browser as expected of this design.
+
+
+# Assumptions
+
+- Gina Campbell will be available to contact should any need for comments or assistance in further defining requirements or receiving feedback on current iterations.
+- UMKC's facilities will be available to use during its predetermined hours of operation, including but not limited to, the SCE computer labs and remote services.
+
+# Success Criteria
+
+The project is a success if it meets two separate criteria:
+
+ 1. The resulting application at the end of the semester meets the requirements set forth by Gina Campbell, documented as represented by Professor Kendall Bingham in necessary forms.
+ 2. A consensus of the working team is that the team functioned to standards set of them both by professional practice and course requirements.
+
+# Scope
+
+- Based on our initial architecture, editing professors and their constraints should not be an issue concerning rewrites of the program. The session configuration can be edited by users, and eventually administrative roles distinctly (reach goal).
+
+- As mentioned in the section above, the delivered product should demonstrate the ability to deliver content tailored to the user’s preferences, but a complete implementation of this feature is beyond the scope of the current project.
+
+- Due to the limits of the course constraining the project, many non-essential features will need to be condensed to their minimal presentable form. High-priority features dealing with structural logic and defining ideal user-facing interaction will be maintained early on the process of iteration. 
+
+# Risks and Obstacles
+
+- A major risk that the team faces is that a majority of the members lack of experience in the Rust language. Due diligence should be maintained when developing under this environment and when assessing further outcomes in future iterations.
+- This generates considerable unknowns when (1) making estimates, (2) choosing related technologies, (3) deciding on implementations, and (4) adhering to best practices.
+- Another obstacle is the limited time each member can contribute each week, meaning work done will have less effective time for implementation as the project grows in complexity.
+
+# Signatures
+
+\end{markdown}
+
+\end{document}
