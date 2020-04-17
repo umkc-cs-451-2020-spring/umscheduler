@@ -1,16 +1,15 @@
 name: Rust
 
 on:
+  push:
+    branches: [ master, nightly ]
   pull_request:
-    branches:
-      - nightly
-      - master
-    
+    branches: [ master, nightly ]
 
 jobs:
   build:
 
-    runs-on: [windows]
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
