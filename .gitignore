@@ -2,3 +2,4 @@
 Cargo.lock
 **/*.rs.bk
 ui/node_modules/
+ui/build/
