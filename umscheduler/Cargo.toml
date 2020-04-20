@@ -1,7 +1,7 @@
 [package]
 name = "umscheduler"
 version = "0.1.0"
-authors = ["Samuel Lim", "Zachary Zoltek", "Alivia Dutcher"]
+authors = ["Samuel Lim", "Zachary Zoltek", "Alivia Dutcher", "Yazdan Riazi"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -9,6 +9,7 @@ edition = "2018"
 [dependencies]
 rouille = "3.0.0"
 rocket = "0.4.4"
+sqlx = { version = "0.3.4", features = [ "macros", "mysql", "chrono" ] }
 
 [dev-dependencies]
 cargo-edit = "0.6.0"
