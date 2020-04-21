@@ -1,8 +1,13 @@
 #[macro_use]
 extern crate rouille;
+// extern crate rocket;
+extern crate sqlx;
+
+mod database;
+pub use database::*;
 
 use rouille::{
-    Request,
+    // Request,
     Response,
 };
 
