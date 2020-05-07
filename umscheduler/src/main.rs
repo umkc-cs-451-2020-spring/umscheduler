@@ -15,9 +15,6 @@ fn main() {
     rouille::start_server("localhost:8080", move |req| {
         // A simple test
         router!(req,
-            (GET) (/) => {
-                Response::text("Hello! Unfortunately there is nothing to see here.")
-            },
             _ => Response::empty_404()
         )
     });

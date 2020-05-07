@@ -185,36 +185,12 @@ class Individual(object):
     def fitness(self) -> Union[int, float]:
 
         enrollments = {
-            'CS101A':40,
-            'CS101B':25,
-            'CS201A':30,
-            'CS201B':30,
-            'CS191A':60, 
-            'CS191B':20, 
-            'CS291B':40, 
-            'CS291A':20, 
-            'CS303':50, 
-            'CS341':40, 
-            'CS449':55, 
-            'CS461':40
         }
 
         lectures = {
-            'Hare': {'CS101A', 'CS101B', 'CS201A', 'CS201B', 'CS291A', 'CS291B', 'CS303', 'CS449', 'CS461'},
-            'Bingham': {'CS101A', 'CS101B', 'CS191A', 'CS191B', 'CS201A', 'CS201B', 'CS291A', 'CS291B', 'CS449'},
-            'Kuhail': {'CS303', 'CS341'},
-            'Mitchell': {'CS191A', 'CS191B', 'CS291A', 'CS291B', 'CS303', 'CS341'},
-            'Rao': {'CS291A', 'CS291B', 'CS303', 'CS341', 'CS461'}
         }
 
         capacities = {
-            'HAAG301':70,
-            'HAAG206':30,
-            'ROYALL204':70,
-            'KATZ209':50,
-            'FLARSHEIM310':80,
-            'FLARSHEIM260':25,
-            'BLOCH0009':30
         }
         rooms = capacities.keys()
         times = [10, 11, 12, 13, 14, 15, 16]
@@ -269,16 +245,10 @@ class Individual(object):
                 uniques[(teach)] += 1
                 if uniques.get((teach)) > 4:
                     fitness_value -= 5
-                # EXTRA CREDIT:
-                if teach == 'Hare' and uniques.get((teach)) < 2:
-                    fitness_value += 10
-
-            gradTotal = uniques.get(('Rao'), 0) + uniques.get(('Mitchell'), 0)
-            notGradTotal = uniques.get(('Hare'), 0) + uniques.get(('Bingham'), 0)
-            # if hierarchy breached
+            gradTotal = uniques.get(('XGrad'), 0) + uniques.get((''), 0)
+            notGradTotal = uniques.get(('X'), 0) + uniques.get((''), 0)
             if gradTotal > notGradTotal:
                 multiplier -= 5
-            # EXTRA CREDIT:
             if gradTotal < 2 * notGradTotal:
                 multiplier += 5
         # check pairing

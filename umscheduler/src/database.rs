@@ -1,4 +1,4 @@
-
+/// Begins the automated connection into the database endpoints.
 
 use std::cmp::Eq;
 use sqlx::encode::Encode;
