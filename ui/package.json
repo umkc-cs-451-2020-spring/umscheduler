@@ -14,7 +14,7 @@
     "email-validator": "^2.0.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.1.5",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.4",
     "purecss": "^2.0.0",
     "react": "^16.13.1",
